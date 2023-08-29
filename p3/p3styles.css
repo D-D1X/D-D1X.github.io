@@ -1,0 +1,64 @@
+html{
+	height:100%;
+}
+body{
+	font-family: 'Trade Winds', cursive, sans-serif;
+	background-image: url("https://i5.walmartimages.com/asr/11895eb6-2608-45ef-9e0b-a76455cacc7a.e0d7a0b5440bedbd854326cac3297406.jpeg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
+	height: 100%;
+	width: 100%;
+	background-repeat: no-repeat;
+}
+
+h1{
+	padding-top: 10px;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	box-shadow: 0px 10px #F6F6DD;
+	border-left: 3px solid black;
+	border-right: 3px solid black;
+}
+
+h1, p{
+	text-align: center;
+	margin: auto;
+	background: #F6F6DD;
+	width: 50%;
+}
+
+p{
+	font-size: 24px;
+	margin-top: 0;
+	margin-bottom: 100px;
+	padding-top: 0;
+	border-right: 3px solid black;
+	border-left: 3px solid black;
+	border-bottom: 3px solid black;
+}
+
+.quiz{
+	margin: auto;
+	background: rgba(247,224,169,.5);
+	width: 75%;
+}
+
+.button{
+	margin: auto;
+	text-align: center;
+}
+
+.btn.btn-success{
+	width: 75%;
+	font-size: 20px;
+}
+
+#results{
+	margin: auto;
+	margin-top: 10px;
+	text-align: center;
+	font-size: 24px;
+	background: #F6F6DD;
+	width: 50%;
+}
