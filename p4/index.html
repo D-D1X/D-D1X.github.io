@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="p4.styles.css">
+    <title>Guess a Number</title>
+</head>
+<body>
+<div class="form-holder">
+    <div class="form-content">
+        <div class="form-items">
+            <h1>Guessing Game</h1>
+            <h3>I'm thinking of a number between 1 and 50</h3>
+            <form id="guessForm">
+                <input class="form-control" type="text" id="guessNum" placeholder="Your Guess?">
+                <input class="btn btn-primary" type="submit" value="Guess">
+            </form>
+            <h3 id="response"></h3>
+            <div class="feedback">
+                <br><a href="#" id="giveUp">Give Up?</a><br>
+                <a href="#" id="restart">Restart</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    let randNum = Math.floor(Math.random() * 50) + 1;
+    let count = 1;
+
+    document.getElementById("guessForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        let num = document.getElementById("guessNum").value;
+        let response = document.getElementById("response");
+
+        if (num >= 1 && num <= 50) {
+            if (num == randNum) {
+                response.innerHTML = `<div class='success'>Congratulations!</div> You guessed the correct number in only ${count} attempts.`;
+            } else if (num < randNum) {
+                response.innerHTML = "<div class='response'>Try a higher number</div>";
+                count++;
+            } else {
+                response.innerHTML = "<div class='response'>Try a lower number</div>";
+                count++;
+            }
+        } else {
+            response.innerHTML = "<div class='response'>Please enter a valid number in range</div>";
+        }
+    });
+
+    function restartGame() {
+        randNum = Math.floor(Math.random() * 50) + 1;
+        count = 1;
+        document.getElementById("response").innerHTML = "";
+        document.getElementById("guessNum").value = "";
+    }
+
+    document.getElementById("giveUp").addEventListener("click", function() {
+        alert(`The number was ${randNum}. Better luck next time!`);
+        restartGame();
+    });
+
+    document.getElementById("restart").addEventListener("click", function() {
+        restartGame();
+    });
+</script>
+<footer class="footer">
+    <div class="footer">
+    Converted to Javascript for Github Pages (PHP files can be found on repo)
+</div>
+</footer>
+</body>
+</html>
