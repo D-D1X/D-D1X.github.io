@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="p7.styles.css">
+    <title>AI Image Generator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left-container">
+            <div class="headings-container">
+                <h1>AI Image Generator</h1>
+                <h3>Convert Your Text into Images</h3>
+            </div>
+
+            <div class="interaction-container">
+                <textarea id="textToConvert" 
+                    placeholder="Enter your prompt..." 
+                    cols="35" rows="10" 
+                    class="text-control"></textarea>
+
+                <p class="error-para"></p> 
+
+                <button class="btn" id="convertBtn">
+                    Generate
+                </button>
+            </div>
+        </div>
+
+        <div class="right-container">
+            <div id="image-result"></div> 
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="p7.js"></script>
+</body>
+</html>
