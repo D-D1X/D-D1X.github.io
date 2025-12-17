@@ -1,0 +1,123 @@
+body {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* adding background image to right side */
+.background-right {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 98%;
+    background: linear-gradient(to right, #090979, #9100ff);
+    background-size: cover;
+    background-position: 50% 50%;
+    border-right: 15px solid white;
+}
+
+/* adding background image to left side */
+.background-left {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 98%;
+    background: linear-gradient(to right, #f9831c, #ff1d00);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+#background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -3;
+}
+
+/* slide is used to slide the form left-right sides when toggle on button */
+#slide {
+    width: 50%;
+    max-height: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-left: 0;
+    position: absolute;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+/* this make forms z-index greater than background-image */
+.top {
+    width: 200%;
+    height: 100%;
+    position: relative;
+    left: 0;
+    left: -100%;
+    margin-left: 100%;
+}
+
+/* this indicates Test Network Button will appear on the left side */
+.left {
+    width: 50%;
+    height: 100%;
+    background: #ffff;
+    left: 0;
+    position: absolute;
+}
+
+/* This indicates results will appear on the right side */
+.right {
+    width: 50%;
+    height: 100%;
+    background: #ffff;
+    right: 0;
+    position: absolute;
+}
+
+/* position the form into center of the viewbox */
+.content {
+    width: 300px;
+    margin: 0 auto;
+    top: 30%;
+    position: absolute;
+    left: 50%;
+    margin-left: -125px;
+}
+
+.content-right {
+    color: #b43d28;
+    font-size: 35px;
+}
+
+.content-left{
+    color: #4628b4;
+    font-size: 35px;
+}
+
+.button-right {
+    background-color: #b43d28;
+    color: white;
+    width: auto;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+
+.button-left {
+    background-color: #4628b4;
+    color: white;
+    width: auto;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+
+#results {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 20pt;
+    color: #b43d28
+}

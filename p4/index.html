@@ -49,16 +49,26 @@
         }
     });
 
-    document.getElementById("giveUp").addEventListener("click", function() {
-        alert(`The number was ${randNum}. Better luck next time!`);
-    });
-
-    document.getElementById("restart").addEventListener("click", function() {
+    function restartGame() {
         randNum = Math.floor(Math.random() * 50) + 1;
         count = 1;
         document.getElementById("response").innerHTML = "";
         document.getElementById("guessNum").value = "";
+    }
+
+    document.getElementById("giveUp").addEventListener("click", function() {
+        alert(`The number was ${randNum}. Better luck next time!`);
+        restartGame();
+    });
+
+    document.getElementById("restart").addEventListener("click", function() {
+        restartGame();
     });
 </script>
+<footer class="footer">
+    <div class="footer">
+    Converted to Javascript for Github Pages (PHP files can be found on repo)
+</div>
+</footer>
 </body>
 </html>

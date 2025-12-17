@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="p5.styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="p5.js"></script>
+    <title>
+        Network Speed Detector
+    </title>
+</head>
+
+<script>
+    $(document).ready(function () {
+    $("#rightToLeft").on("click", function () {
+        $("#slide").animate({
+            marginLeft: "0",
+        })
+        $(".top").animate({
+            marginLeft: "100%",
+        });
+    });
+    $("#leftToRight").on("click", function () {
+        $("#slide").animate({
+            marginLeft: "50%",
+        });
+        $(".top").animate({
+            marginLeft: "0",
+        });
+    });
+});
+</script>
+
+<body>
+    <div id="background">
+        <div class="background-right"></div>
+        <div class="background-left"></div>
+    </div>
+
+    <div id="slide">
+        <div class="top">
+            <div class="left">
+                <div class="content">
+                    <h2 class="content-left">Network Speed Detector</h2>
+                        <button id="leftToRight" class="button-left" onclick="getResults()">
+                            Test
+                        </button>
+                </div>
+            </div>
+            <div class="right">
+                <div class="content">
+                    <h2 class="content-right">Results</h2>
+                        <div id="results"></div>
+                        <button id="rightToLeft" class="button-right">
+                            Restart
+                        </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
